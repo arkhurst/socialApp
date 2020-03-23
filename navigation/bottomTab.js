@@ -23,12 +23,12 @@ export default function BottomTabNavigator({ navigation, route }) {
           name="Home"
           component={HomeScreen}
           options={{ 
-            title: 'Home',
+           
             tabBarIcon: ({ tintColor }) => <Ionicons 
                     color={tintColor} 
                     name="ios-home" 
                     size={24}
-                    />,
+                    />      
           
           }}
         />
@@ -38,7 +38,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           options={{
             title: 'Message',
             tabBarIcon: ({ tintColor }) => <Ionicons color={tintColor} name="ios-chatboxes" size={24}  />,
-          
+            
           }}
         />
         <BottomTab.Screen

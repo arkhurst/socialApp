@@ -77,7 +77,7 @@ const RegisterScreen = ({navigation}) => {
                 </View>
             </View>
             <TouchableOpacity style={styles.button} onPress={() => handleSignUp()}>
-                <Text style={{fontWeight:'bold', color:'#fff'}}>Sign in</Text>
+                <Text style={{fontWeight:'bold', color:'#fff'}}>Sign up</Text>
             </TouchableOpacity>
             {showLoading ? (
                 <Lottie source={loading} autoPlay loop style={{marginTop:10, height:120, width:120, marginLeft:40}}/>

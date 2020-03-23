@@ -6,6 +6,7 @@ import BottomTab from './navigation/bottomTab';
 import LoginScreen from './screens/loginScreen';
 import RegisterScreen from './screens/registerScreen';
 import LoadingScreen from './screens/loadingScreen';
+import { View } from 'react-native';
 
 
 
@@ -39,6 +40,11 @@ const App = () => {
               component={BottomTab} 
               options={{
               headerBackTitleVisible:false, 
+              headerStyle: {
+                backgroundColor:"#e9446a",
+                height:100
+              },
+              headerLeft: () => <View />
                  }}/>
            <Stack.Screen 
            name="Login" component={LoginScreen} options={{headerShown:false}} />
