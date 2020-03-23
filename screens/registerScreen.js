@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
+import Lottie from 'lottie-react-native';
+import * as loading from '../assets/51-preloader.json';
 import * as firebase from 'firebase';
 
 const RegisterScreen = ({navigation}) => {
@@ -78,7 +80,7 @@ const RegisterScreen = ({navigation}) => {
                 <Text style={{fontWeight:'bold', color:'#fff'}}>Sign in</Text>
             </TouchableOpacity>
             {showLoading ? (
-                <ActivityIndicator size="large" style={{marginTop:10}}></ActivityIndicator>
+                <Lottie source={loading} autoPlay loop style={{marginTop:10, height:120, width:120, marginLeft:40}}/>
             ) : (
                null
             )}
@@ -95,7 +97,7 @@ const RegisterScreen = ({navigation}) => {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        marginTop:80,
+        marginTop:50,
     },
     greeting:{
         marginTop:32,
@@ -152,7 +154,6 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         marginLeft:160,
-        marginTop:7
     }
 })
 export default RegisterScreen;

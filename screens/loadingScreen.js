@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import Lottie from 'lottie-react-native';
+import * as loading from '../assets/51-preloader.json';
 import * as firebase from 'firebase';
 
 const LoadingScreen = ( {navigation} ) => {
@@ -14,7 +16,7 @@ const LoadingScreen = ( {navigation} ) => {
     return(
         <View style={styles.container}>
             <Text>Loading...</Text>
-            <ActivityIndicator size="large" ></ActivityIndicator>
+            <Lottie source={loading} autoPlay loop autoPlay style={{width:120, height:120}} />
         </View>
     );
 };
