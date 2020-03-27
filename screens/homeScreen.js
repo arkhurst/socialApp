@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
        flex:1,
        justifyContent:'center',
        alignItems:'center',
-       backgroundColor:"#161924"
+    //    backgroundColor:"#161924"
    },
    logout:{
        marginTop:32,

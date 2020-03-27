@@ -24,7 +24,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           component={HomeScreen}
           options={{ 
             tabBarIcon: ({ focused }) => <Ionicons 
-                    color={focused ? 'tomato' : '#b8bbc4'} 
+                    color={focused ? '#e9446a' : '#b8bbc4'} 
                     name="ios-home" 
                     size={24}
                     />      
@@ -36,7 +36,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           component={MessageScreen}
           options={{
             title: 'Message',
-            tabBarIcon: ({ focused }) => <Ionicons color={focused ? 'tomato' : '#b8bbc4'} name="ios-chatboxes" size={24}  />,
+            tabBarIcon: ({ focused }) => <Ionicons color={focused ? '#e9446a' : '#b8bbc4'} name="ios-chatboxes" size={24}  />,
             
           }}
         />
@@ -63,7 +63,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           component={NotificationScreen}
           options={{
             title: 'Notification',
-            tabBarIcon: ({ focused }) => <Ionicons color={focused ? 'tomato' : '#b8bbc4'} name="ios-notifications" size={24}  />,
+            tabBarIcon: ({ focused }) => <Ionicons color={focused ? '#e9446a' : '#b8bbc4'} name="ios-notifications" size={24}  />,
           
           }}
         />
@@ -72,7 +72,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           component={ProfileScreen}
           options={{
             title: 'Profile',
-            tabBarIcon: ({ focused }) => <Ionicons color={focused ? 'tomato' : '#b8bbc4'} name="ios-person" size={24}  />,
+            tabBarIcon: ({ focused }) => <Ionicons color={focused ? '#e9446a' : '#b8bbc4'} name="ios-person" size={24}  />,
           
           }}
         />
