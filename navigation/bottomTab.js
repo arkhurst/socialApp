@@ -17,15 +17,14 @@ export default function BottomTabNavigator({ navigation, route }) {
       <BottomTab.Navigator tabBarOptions={{
           activeTintColor:'tomato',
           inactiveTintColor:'#b8bbc4',
-         showLabel:false
+          showLabel:false
       }} initialRouteName={INITIAL_ROUTE_NAME}>
         <BottomTab.Screen
           name="Home"
           component={HomeScreen}
           options={{ 
-           
-            tabBarIcon: ({ tintColor }) => <Ionicons 
-                    color={tintColor} 
+            tabBarIcon: ({ focused }) => <Ionicons 
+                    color={focused ? 'tomato' : '#b8bbc4'} 
                     name="ios-home" 
                     size={24}
                     />      
@@ -37,7 +36,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           component={MessageScreen}
           options={{
             title: 'Message',
-            tabBarIcon: ({ tintColor }) => <Ionicons color={tintColor} name="ios-chatboxes" size={24}  />,
+            tabBarIcon: ({ focused }) => <Ionicons color={focused ? 'tomato' : '#b8bbc4'} name="ios-chatboxes" size={24}  />,
             
           }}
         />
@@ -64,7 +63,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           component={NotificationScreen}
           options={{
             title: 'Notification',
-            tabBarIcon: ({ tintColor }) => <Ionicons color={tintColor} name="ios-notifications" size={24}  />,
+            tabBarIcon: ({ focused }) => <Ionicons color={focused ? 'tomato' : '#b8bbc4'} name="ios-notifications" size={24}  />,
           
           }}
         />
@@ -73,7 +72,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           component={ProfileScreen}
           options={{
             title: 'Profile',
-            tabBarIcon: ({ tintColor }) => <Ionicons color={tintColor} name="ios-person" size={24}  />,
+            tabBarIcon: ({ focused }) => <Ionicons color={focused ? 'tomato' : '#b8bbc4'} name="ios-person" size={24}  />,
           
           }}
         />

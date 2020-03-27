@@ -1,4 +1,5 @@
 import React from 'react';
+import { Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'; 
 import * as firebase from 'firebase';
@@ -9,7 +10,7 @@ import LoadingScreen from './screens/loadingScreen';
 import { View } from 'react-native';
 
 
-
+const winheight = Dimensions.get('window').height; 
 const Stack = createStackNavigator();
 
 
@@ -42,7 +43,10 @@ const App = () => {
               headerBackTitleVisible:false, 
               headerStyle: {
                 backgroundColor:"#e9446a",
-                height:100
+                height:winheight * 0.1,
+              },
+              headerTitleStyle:{
+                 color:'#fff'
               },
               headerLeft: () => <View />
                  }}/>

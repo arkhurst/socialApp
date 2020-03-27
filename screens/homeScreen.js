@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, LayoutAnimation } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, LayoutAnimation, StatusBar } from 'react-native';
 import * as firebase from 'firebase';
 
 class HomeScreen extends React.Component  {
@@ -21,6 +21,7 @@ class HomeScreen extends React.Component  {
         LayoutAnimation.easeInEaseOut()
         return(
             <View style={styles.container}>
+                <StatusBar barStyle="light-content" />
                 <Text style={{fontWeight:'400', fontSize:19}}>Hi, {this.state.displayName}</Text>
                 <TouchableOpacity style={styles.logout} onPress={this.signOut}>
                     <Text>Log out</Text>
@@ -35,7 +36,8 @@ const styles = StyleSheet.create({
    container:{
        flex:1,
        justifyContent:'center',
-       alignItems:'center'
+       alignItems:'center',
+       backgroundColor:"#161924"
    },
    logout:{
        marginTop:32,
